@@ -1,0 +1,302 @@
+<div class="wrapper">
+  <!-- Sidebar  -->
+  <nav id="sidebar">
+    <app-sidebar></app-sidebar>
+  </nav>
+
+  <!-- Page Content  -->
+
+  <div id="content">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+
+        <button
+          class="btn btn-dark d-inline-block d-lg-none ml-auto"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-align-justify"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a cl style="z-index: 300;"ass="nav-link" href="#">Page</a>
+            </li>
+            <li class="nav-item">
+              <a cl style="z-index: 300;"ass="nav-link" href="#">Page</a>
+            </li>
+            <li class="nav-item">
+              <a cl style="z-index: 300;"ass="nav-link" href="#">Page</a>
+            </li>
+            <li class="nav-item">
+              <a cl style="z-index: 300;"ass="nav-link" href="#">Page</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav> -->
+    <div class="content-header">
+      <header class="header">
+        <div class="header-title">
+          <button type="button" class="sidebarCollapse btn">
+            <i class="fas fa-bars"></i>
+          </button>
+          <span class="title-padding"> PlayUnited.com > Casinos </span>
+          <div style="float: right;margin-top:10px;">
+            <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0)">
+                <path d="M-4.76904 0H23.8076V14.0376H-4.76904V0Z" fill="#000066" />
+                <path
+                  d="M-4.76904 0V1.56944L20.6127 14.0377H23.8076V12.4683L-1.57419 0H-4.76904ZM23.8076 0V1.56941L-1.57419 14.0376H-4.76904V12.4682L20.6127 0H23.8076Z"
+                  fill="#1E60E1" white />
+                <path d="M7.13788 0V14.0376H11.9007V0H7.13788ZM-4.76904 4.67921V9.35841H23.8076V4.67921H-4.76904Z"
+                  fill="#1E60E1" white />
+                <path
+                  d="M-4.76904 5.61505V8.42257H23.8076V5.61505H-4.76904ZM8.09046 0V14.0376H10.9481V0H8.09046ZM-4.76904 14.0376L4.7565 9.35841H6.88642L-2.63912 14.0376H-4.76904ZM-4.76904 0L4.7565 4.67921H2.62658L-4.76904 1.04633V0ZM12.1521 4.67921L21.6777 0H23.8076L14.282 4.67921H12.1521ZM23.8076 14.0376L14.282 9.35841H16.412L23.8076 12.9913V14.0376Z"
+                  fill="#CC0000" />
+              </g>
+              <defs>
+                <clipPath id="clip0">
+                  <rect width="19" height="14" fill="#1E60E1" />
+
+                  white
+                </clipPath>
+              </defs>
+            </svg>
+
+            <span> EN</span>
+
+            <svg width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M6.61773 1.58301H1.6594C1.555 1.58301 1.45969 1.64196 1.41286 1.73534C1.36658 1.82872 1.3765 1.94028 1.43903 2.02375L3.91819 5.3293C3.96998 5.39872 4.05179 5.43949 4.13856 5.43949C4.22533 5.43949 4.30687 5.39872 4.35893 5.3293L6.8381 2.02375C6.9009 1.94028 6.91082 1.82872 6.86427 1.73534C6.81744 1.64196 6.72213 1.58301 6.61773 1.58301Z"
+                fill="black" />
+            </svg>
+
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-search"></i></span>
+          </div>
+        </div>
+        <div class="container-fluid"></div>
+      </header>
+      <div class="container-fluid header-container-fluid">
+        <h2 class="h1-title">
+          RECOMMEND FOR YOU: <span style="color: #1e60e1">573 CASINOS</span>
+        </h2>
+      </div>
+
+      <div id="header">
+        <ul class="menu-component">
+          <li>
+            <button [style.background]="checkstyle1 ? '#1E60E1' : 'white'"
+              [style.color]="checkstyle1 ? 'white' : 'black'" (click)="ToogleClickMenuButton1()">
+              Recommended ({{FilterCount(1)}})
+
+
+            </button>
+          </li>
+          <li>
+            <button [style.background]="checkstyle2 ? '#1E60E1' : 'white'"
+              [style.color]="checkstyle2 ? 'white' : 'black'" (click)="ToogleClickMenuButton2()">
+              Big Brands ({{FilterCount(2)}})
+            </button>
+          </li>
+          <li>
+            <button [style.background]="checkstyle3 ? '#1E60E1' : 'white'"
+              [style.color]="checkstyle3 ? 'white' : 'black'" (click)="ToogleClickMenuButton3()">
+              Newly Opnened ({{FilterCount(3)}})
+            </button>
+          </li>
+          <li>
+            <button [style.background]="checkstyle4 ? '#1E60E1' : 'white'"
+              [style.color]="checkstyle4 ? 'white' : 'black'" (click)="ToogleClickMenuButton4()">
+              All ({{CountOfAll}})
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <hr class="new4" />
+      <div class="container-fluid paragraph">
+        <div class="row">
+          <div class="paragraph-content" [ngClass]="statusParagraph == true ? 'paragraph1' : 'paragraph2'">
+            We've thoroughly reviewed Wazamba Casino and gave it a good
+            reputation rating. It's generally a good casino to play at, but
+            there are some things worth noting. In our review, we've considered
+            the casino's player complaints, estimated revenues, license, games
+            genuineness, customer support quality, fairness of terms and
+            conditions, withdrawal and win limits, and other factors. Because
+            Wazamba Casino is related to other online casinos listed n limits,
+            and other factors. Because Wazamba Casino is related to other online
+            casinos listed below, its rating is also influenced by them. Read
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eum
+            ducimus.
+          </div>
+          <div *ngIf="statusParagraph == true" class="after-paragraph"></div>
+          <div class="btn-hide-content-paragraph">
+            <a (click)="toggleStatus()" class="button-icon">
+              Showmore
+              <i class="fas fa-chevron-up icon-toggle"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="test-filter">
+      <div class="row">
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="grid-container1">
+            <div class="grid-item item11">
+
+              <div class="filter-item">
+                <span>Active filters: Casino Accepts Players from:</span>
+                <button>
+                  Canada
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+              <div class="filter-item">
+                <span>Casino Games:</span>
+                <button>
+                  Slots
+                  <i class="fas fa-times"></i>
+                </button>
+                &nbsp;
+                <button class="btn-reset-filter">Reset filters</button>
+              </div>
+            </div>
+            <div class="grid-item item33">
+              <button>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15 3H11C10.4 3 10 3.4 10 4C10 4.6 10.4 5 11 5H15C15.6 5 16 4.6 16 4C16 3.4 15.6 3 15 3Z"
+                    fill="#1E60E1" />
+                  <path
+                    d="M5 1C3.7 1 2.6 1.9 2.2 3C2.1 3 2.1 3 2 3H1C0.4 3 0 3.4 0 4C0 4.6 0.4 5 1 5H2C2.1 5 2.1 5 2.2 5C2.6 6.1 3.7 7 5 7C6.7 7 8 5.7 8 4C8 2.3 6.7 1 5 1Z"
+                    fill="#1E60E1" />
+                  <path d="M1 13H5C5.6 13 6 12.6 6 12C6 11.4 5.6 11 5 11H1C0.4 11 0 11.4 0 12C0 12.6 0.4 13 1 13Z"
+                    fill="#1E60E1" />
+                  <path
+                    d="M15 11H14C13.9 11 13.9 11 13.8 11C13.4 9.8 12.3 9 11 9C9.3 9 8 10.3 8 12C8 13.7 9.3 15 11 15C12.3 15 13.4 14.1 13.8 13C13.9 13 13.9 13 14 13H15C15.6 13 16 12.6 16 12C16 11.4 15.6 11 15 11Z"
+                    fill="#1E60E1" />
+                </svg>
+                &nbsp;
+                Filter(2)
+              </button>
+            </div>
+            <div class="grid-item item44">
+              <button><strong>Sort: </strong>Recommend</button>
+            </div>
+            <div class="grid-item item55">
+              <span>Showing casinos: Accepting players from Greece with Reputation rating above 7.5</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- listcontent -->
+    <div class="container-fluid app-background">
+
+
+
+
+
+
+      <div class="row">
+        <div class="app-page-item" *ngFor="let item of ListDataCasino | paginate:
+        {itemsPerPage : itemsPageCount,currentPage : p,
+          totalItems:CasinodataBasic.length
+      };let i =index">
+          <app-page [CasinoItems]="item" style="z-index: 300"></app-page>
+        </div>
+
+
+
+        <div class="container-fluid container-footer">
+          <div class="row container-footer-showmore">
+            <button (click)="ShowMoreItem();">show more</button>
+          </div>
+        </div>
+
+        <div class="container-fluid container-footer">
+          <div class="row container-footer-pagination-control">
+
+            <pagination-controls class="pagination-controls" (pageChange)="p = $event"></pagination-controls>
+            <div> <input style="display: none;" #calcIndex value=" {{(p!-1)*itemsPageCount!+itemsPageCount!}}" />
+              {{ getIndexStart((p!-1)*itemsPageCount!+1) }} - {{ getIndexRecord(calcIndex.value) }} / {{
+              ListDataCasino.length }}</div>
+
+
+
+
+            <!-- <pagination-controls (pageChange)="p = $event"></pagination-controls> -->
+
+          </div>
+
+          <div class="mini-pagination-controls">
+            <!-- <pagination-controls class="pagination-controls" nextLabel="Next" previousLabel="Previous"
+              (pageChange)="p = $event"></pagination-controls> -->
+            <pagination-template class="mini-pagination" #api="paginationApi" (pageChange)="p = $event">
+              <div class="pagination-previous" [class.disabled]="api.isFirstPage()">
+                <i class="fas fa-chevron-left"></i>
+                <a (click)="api.previous()"> Previous </a>
+              </div>
+              <div class="pagination-next" [class.disabled]="api.isLastPage()">
+                <a (click)="api.next()"> Next </a>
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </pagination-template>
+
+          </div>
+        </div>
+
+        <div class="mini-filter-footer">
+          <div class="mini-filter-item">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 3H11C10.4 3 10 3.4 10 4C10 4.6 10.4 5 11 5H15C15.6 5 16 4.6 16 4C16 3.4 15.6 3 15 3Z"
+                fill="#111111" />
+              <path
+                d="M5 1C3.7 1 2.6 1.9 2.2 3C2.1 3 2.1 3 2 3H1C0.4 3 0 3.4 0 4C0 4.6 0.4 5 1 5H2C2.1 5 2.1 5 2.2 5C2.6 6.1 3.7 7 5 7C6.7 7 8 5.7 8 4C8 2.3 6.7 1 5 1Z"
+                fill="#111111" />
+              <path d="M1 13H5C5.6 13 6 12.6 6 12C6 11.4 5.6 11 5 11H1C0.4 11 0 11.4 0 12C0 12.6 0.4 13 1 13Z"
+                fill="#111111" />
+              <path
+                d="M15 11H14C13.9 11 13.9 11 13.8 11C13.4 9.8 12.3 9 11 9C9.3 9 8 10.3 8 12C8 13.7 9.3 15 11 15C12.3 15 13.4 14.1 13.8 13C13.9 13 13.9 13 14 13H15C15.6 13 16 12.6 16 12C16 11.4 15.6 11 15 11Z"
+                fill="#111111" />
+            </svg>
+            &nbsp;
+            Filter(2)
+
+          </div>
+          <div class="mini-filter-item">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M9 15H7C6.448 15 6 14.552 6 14C6 13.448 6.448 13 7 13H9C9.552 13 10 13.448 10 14C10 14.552 9.552 15 9 15Z"
+                fill="#111111" />
+              <path
+                d="M11 11H5C4.448 11 4 10.552 4 10C4 9.448 4.448 9 5 9H11C11.552 9 12 9.448 12 10C12 10.552 11.552 11 11 11Z"
+                fill="#111111" />
+              <path
+                d="M13 7H3C2.448 7 2 6.552 2 6C2 5.448 2.448 5 3 5H13C13.552 5 14 5.448 14 6C14 6.552 13.552 7 13 7Z"
+                fill="#111111" />
+              <path
+                d="M15 3H1C0.448 3 0 2.552 0 2C0 1.448 0.448 1 1 1H15C15.552 1 16 1.448 16 2C16 2.552 15.552 3 15 3Z"
+                fill="#111111" />
+            </svg>
+            &nbsp;
+            Sort
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
